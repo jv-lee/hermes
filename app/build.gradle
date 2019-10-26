@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.dcendents.android-maven'
-group='jv.lee@foxmail.com'
 
 android {
     compileSdkVersion 28
