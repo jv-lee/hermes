@@ -7,6 +7,7 @@ import android.util.Log;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 1.缓存中心设计
@@ -16,7 +17,7 @@ import java.util.HashMap;
  */
 public class CacheCenter {
     private HashMap<String, Class<?>> mClasses = new HashMap<>();
-    private HashMap<Class<?>, HashMap<String, Method>> mMethods = new HashMap<>();
+    private ConcurrentHashMap<Class<?>, HashMap<String, Method>> mMethods = new ConcurrentHashMap<>();
     private HashMap<String, Object> mObjects = new HashMap<>();
 
     private CacheCenter(){}
